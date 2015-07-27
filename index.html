@@ -4,19 +4,20 @@
 		<title>Browserling Testing</title>
 	</head>
 	<body>
-		<div></div>
 		<script type="text/javascript">
-			var div = document.querySelectorAll('div')[0];
 			var count = 0;
 			var f = document.createDocumentFragment();
+			document.open();
+			document.close();
+			document.writeln([].__proto__ !== undefined)
 			for(var key in HTMLElement.prototype) {
 				var keyElement = document.createElement('div');
 				keyElement.textContent = key;
 				f.appendChild(keyElement);
 				count++;
 			}
-			div.appendChild(f);
-			div.innerHTML += count;
+			document.body.appendChild(f);
+			document.body.innerHTML += count;
 		</script>
 	</body>
 </html>
