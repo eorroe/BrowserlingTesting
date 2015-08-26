@@ -4,20 +4,11 @@
 		<title>Browserling Testing</title>
 	</head>
 	<body>
-		<script type="text/javascript">
-			var count = 0;
-			var f = document.createDocumentFragment();
-			document.open();
-			document.close();
-			document.writeln([].__proto__ !== undefined)
-			for(var key in HTMLElement.prototype) {
-				var keyElement = document.createElement('div');
-				keyElement.textContent = key;
-				f.appendChild(keyElement);
-				count++;
-			}
-			document.body.appendChild(f);
-			document.body.innerHTML += count;
-		</script>
+		<ul id="list">
+			<li>Hello</li>
+			<li>World</li>
+			<li>!</li>
+		</ul>
+		<script type="text/javascript" src="https://rawgit.com/eorroe/NodeList.js/master/nodeListLib.min.js"></script>
 	</body>
 </html>
