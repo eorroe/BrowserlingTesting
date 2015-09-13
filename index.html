@@ -192,7 +192,7 @@
 		if(arrProps.indexOf(key) === -1 && NL[key] === undefined) NL[key] = Array.prototype[key];
 	});
 
-	if(Symbol && Symbol.iterator) NL[Symbol.iterator] = NL.values = Array.prototype[Symbol.iterator];
+	if(window.Symbol && window.Symbol.iterator) NL[window.Symbol.iterator] = NL.values = Array.prototype[window.Symbol.iterator];
 
 	function setterGetter(prop) {
 		if(div[prop] instanceof Function) {
